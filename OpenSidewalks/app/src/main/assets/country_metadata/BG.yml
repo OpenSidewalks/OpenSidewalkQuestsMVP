@@ -1,0 +1,7 @@
+# Do not edit. Source files are in /res/country_metadata
+additionalStreetsignLanguages: [en]
+isLivingStreetKnown: true
+isSlowZoneKnown: true
+officialLanguages: [bg]
+orchardProduces: [grape, plum, apple, cherry, tomatoe, peach, walnut, apricot, chilli_pepper, sweet_pepper,
+  raspberry, strawberry, almond, hazelnut, pear, chestnut]

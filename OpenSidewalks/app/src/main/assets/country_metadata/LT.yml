@@ -1,0 +1,5 @@
+# Do not edit. Source files are in /res/country_metadata
+isLivingStreetKnown: true
+isSlowZoneKnown: true
+officialLanguages: [lt]
+orchardProduces: [apple, blueberry, raspberry, strawberry, pear, cherry, plum, tomatoe]

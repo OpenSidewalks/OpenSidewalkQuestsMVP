@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="de.tcat.opensidewalks">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:name="de.tcat.opensidewalks.StreetCompleteApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:theme="@style/AppTheme.NoActionBar"
+        >
+        <activity
+            android:windowSoftInputMode="adjustResize"
+            android:name="de.tcat.opensidewalks.MainActivity"
+            android:label="OpenSidewalks Quests"
+            android:textSize = "2sp"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="de.tcat.opensidewalks.settings.SettingsActivity"
+            android:label="@string/action_settings"
+            android:launchMode="singleTask"
+            android:parentActivityName="de.tcat.opensidewalks.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MANAGE_NETWORK_USAGE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- see OsmOAuthDialogFragment.CALLBACK_URL -->
+                <data android:scheme="streetcomplete" android:host="oauth" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="de.tcat.opensidewalks.about.AboutActivity"
+            android:label="@string/action_about"
+            android:parentActivityName="de.tcat.opensidewalks.MainActivity"/>
+        <service android:name="de.tcat.opensidewalks.data.download.QuestDownloadService" />
+        <service android:name="de.tcat.opensidewalks.data.upload.QuestChangesUploadService" />
+
+        <receiver android:name="de.tcat.opensidewalks.data.osm.upload.ChangesetAutoCloserReceiver" />
+        <service android:name="de.tcat.opensidewalks.data.osm.upload.ChangesetAutoCloserService" />
+    </application>
+
+</manifest>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                xmlns:tools="http://schemas.android.com/tools">
+
+    <com.mapzen.tangram.MapView
+        android:id="@+id/map"
+        android:name="com.mapzen.tangram.MapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <fragment
+        android:id="@+id/controls_fragment"
+        android:name="de.tcat.opensidewalks.tangram.MapControlsFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/openstreetmapLink"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="4dp"
+        android:layout_marginTop="8dp"
+        tools:ignore="RtlHardcoded"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/mapzenLink"
+        android:textColor="#444444"
+        android:textColorLink="#536dfe"
+        android:textSize="11sp"
+        android:text="@string/map_attribution_mapzen"
+        android:layout_margin="8sp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/openstreetmapLink"
+        android:textColor="#444444"
+        android:textSize="11sp"
+        android:text="@string/map_attribution_osm"
+        android:layout_margin="8sp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

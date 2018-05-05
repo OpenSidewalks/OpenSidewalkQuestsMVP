@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="pref_entries_autosync">
+        <item>@string/autosync_on</item>
+        <item>@string/autosync_only_on_wifi</item>
+        <item>@string/autosync_off</item>
+    </string-array>
+
+    <string-array name="pref_entryvalues_autosync" translatable="false">
+        <item>ON</item>
+        <item>WIFI</item>
+        <item>OFF</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,85 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="MapProgressBar.Horizontal" parent="android:Widget.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/map_progress</item>
+        <item name="android:indeterminateDrawable">@drawable/map_progress</item>
+        <item name="android:minHeight">4dip</item>
+        <item name="android:maxHeight">4dip</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!-- Alert Dialog Styling-->
+    <style name="AppTheme.AlertDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="QuestTitleQuestion">
+        <item name="android:textAlignment">viewStart</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:shadowRadius">0</item>
+    </style>
+
+    <style name="OpeningHoursField">
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:paddingStart">8dp</item>
+        <item name="android:paddingEnd">8dp</item>
+        <item name="android:paddingTop">6dp</item>
+        <item name="android:paddingBottom">6dp</item>
+    </style>
+
+    <style name="OpeningHoursButton" parent="android:Widget.DeviceDefault.Button.Borderless">
+        <item name="android:paddingStart">8dp</item>
+        <item name="android:paddingEnd">8dp</item>
+        <item name="android:paddingTop">6dp</item>
+        <item name="android:paddingBottom">6dp</item>
+    </style>
+
+    <style name="RoundMapButton">
+
+        <item name="android:layout_width">54dp</item>
+        <item name="android:layout_height">54dp</item>
+        <item name="android:background">@drawable/round_button_selector</item>
+        <item name="android:elevation" tools:targetApi="21">4dp</item>
+        <item name="android:scaleType">center</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="ImageSelectLabel">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:shadowRadius">2</item>
+        <item name="android:shadowColor">#000000</item>
+    </style>
+
+    <style name="ImageSelectLabelBelow">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+</resources>

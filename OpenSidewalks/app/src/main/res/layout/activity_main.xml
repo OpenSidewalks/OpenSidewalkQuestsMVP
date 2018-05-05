@@ -1,0 +1,71 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="de.tcat.opensidewalks.MainActivity"
+    >
+
+    <fragment
+        android:id="@+id/map_fragment"
+        android:name="de.tcat.opensidewalks.tangram.QuestsMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/topPanel"
+        android:layout_marginTop="-8dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/topPanel"
+        android:orientation="vertical">
+        <!-- the toolbar somehow always wants to be in front in its layout, so let's ban it into
+             a sub frame layout -->
+        <android.support.v7.widget.Toolbar
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            android:elevation="4dp"
+            app:titleTextAppearance="@style/Toolbar.TitleText">
+
+            <de.tcat.opensidewalks.statistics.AnswersCounter
+                android:id="@+id/answersCounter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:minEms="7"
+                android:paddingEnd="8dp"
+                android:paddingStart="8dp"
+                android:gravity="center_vertical"
+                android:drawableStart="@drawable/ic_star_white_24dp"
+                android:drawablePadding="2dp"
+                />
+
+        </android.support.v7.widget.Toolbar>
+
+        <ProgressBar
+            android:id="@+id/download_progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/MapProgressBar.Horizontal"
+            android:visibility="visible"
+            android:progress="50"
+            android:max = "100"
+            android:indeterminate="false"/>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/map_bottom_sheet_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="false">
+    </FrameLayout>
+
+ </RelativeLayout >
